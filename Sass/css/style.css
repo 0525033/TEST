@@ -1,0 +1,109 @@
+* {
+  font-family: 'Noto Sans TC', sans-serif; }
+
+body {
+  margin: 0px; }
+  body #BG_Video {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    text-align: center; }
+
+#Container {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 7vh 1fr 30px;
+  grid-template-areas: "Header" "Main" "Footer";
+  opacity: 0.9;
+  grid-row-gap: 5vh; }
+  #Container #Header {
+    grid-area: Header;
+    display: grid;
+    grid-template-columns: 100px 1fr 100px;
+    grid-column-gap: 50px;
+    padding: 0px 1vw; }
+    #Container #Header #logo {
+      grid-column: 1;
+      background-image: url(/Image/logo.png);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat; }
+    #Container #Header #nav {
+      grid-column: 2;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      text-align: center; }
+      #Container #Header #nav .nav {
+        flex-grow: 1; }
+        #Container #Header #nav .nav a {
+          text-decoration: none;
+          color: #000; }
+    #Container #Header #search {
+      margin: auto 0px; }
+      #Container #Header #search input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #FFF;
+        width: 100px;
+        display: none; }
+      #Container #Header #search img {
+        width: 20px;
+        float: right; }
+  #Container #Main {
+    grid-area: Main; }
+  #Container #Footer {
+    grid-area: Footer; }
+
+#Footer {
+  font-size: small;
+  font-weight: 100;
+  color: #FFF; }
+  #Footer select {
+    background-color: transparent;
+    color: #FFF;
+    margin-left: 20px; }
+    #Footer select option {
+      color: #000; }
+  #Footer span {
+    margin: auto 20px 1px 50px;
+    float: right; }
+
+#Main {
+  display: grid;
+  grid-template-rows: 1fr 20vh; }
+  #Main #banner {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 15vw;
+    grid-column-gap: 50px;
+    color: #FFF; }
+    #Main #banner #title {
+      grid-column: 1;
+      margin: auto auto 0px 50px; }
+    #Main #banner #partners {
+      grid-column: 2;
+      display: flex;
+      flex-direction: column;
+      font-size: 20px;
+      padding: 50px 0px; }
+      #Main #banner #partners .partner {
+        flex-grow: 1; }
+        #Main #banner #partners .partner a {
+          text-decoration: none;
+          color: #FFF; }
+  #Main #info {
+    grid-row: 2;
+    display: flex;
+    flex-wrap: nowrap;
+    background-color: rgba(0, 0, 0, 0.7); }
+    #Main #info .info {
+      font-weight: 100;
+      color: #FFF;
+      flex-basis: 25%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis; }
