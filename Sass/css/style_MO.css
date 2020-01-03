@@ -2,12 +2,15 @@
   font-family: 'Noto Sans TC', sans-serif; }
 
 #Container {
+  height: 100%;
   height: 100vh;
+  width: 100%;
   width: 100vw;
   display: grid;
   grid-template-rows: 7vh 1fr 20px;
   background-color: rgba(0, 0, 0, 0.5); }
   #Container #Header {
+    background-color: red;
     padding: 10px;
     grid-row: 1;
     display: grid;
@@ -45,14 +48,19 @@
   left: 10px;
   z-index: 1;
   height: 5vh;
-  background-image: url(/Image/back-button.png); }
+  background-image: url(/Image/back-button.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat; }
 
 #menu_page {
   box-sizing: border-box;
   position: fixed;
   top: 0;
   left: 0;
+  height: 100%;
   height: 100vh;
+  width: 100%;
   width: 100vw;
   background-color: rgba(255, 255, 255, 0.9);
   display: grid;
@@ -70,20 +78,23 @@ body {
     left: 0px;
     bottom: 0px;
     overflow: hidden;
-    min-width: 100vw;
-    min-height: 100vh;
+    min-width: 100%;
+    min-height: 100%;
     z-index: -1; }
 
 #Main {
+  background-color: green;
   display: grid;
-  grid-template-rows: 50vh 1fr; }
+  grid-template-rows: 60% 40%; }
   #Main #banner {
     position: relative;
-    grid-row: 1; }
+    grid-row: 1;
+    width: 100%; }
     #Main #banner #title {
       position: absolute;
       bottom: 30px;
-      color: #FFF; }
+      color: #FFF;
+      width: 100%; }
   #Main #info {
     width: 100%;
     white-space: nowrap;
@@ -93,13 +104,14 @@ body {
       overflow-x: scroll;
       white-space: nowrap;
       display: inline-block;
-      width: 90vw;
+      width: 90%;
       background-color: #FFF;
       padding: 20px 10px;
-      margin: 5vh 5vw;
+      margin: 5% 5%;
       border-radius: 10px; }
 
 #Footer {
+  background-color: blue;
   color: #FFF; }
   #Footer > div:nth-child(1) {
     font-size: 10px;
